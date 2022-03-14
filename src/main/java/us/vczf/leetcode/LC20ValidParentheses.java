@@ -3,7 +3,7 @@ package us.vczf.leetcode;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-class LeetCode20ValidParentheses {
+class LC20ValidParentheses {
     static boolean isValid(String s) {
         Deque<Character> stack = new ArrayDeque<>();
         for (char ch : s.toCharArray()) {

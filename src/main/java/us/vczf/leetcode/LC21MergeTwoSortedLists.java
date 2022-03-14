@@ -3,7 +3,7 @@ package us.vczf.leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-class LeetCode21MergeTwoSortedLists {
+class LC21MergeTwoSortedLists {
     static class ListNode {
         int val;
         ListNode next;

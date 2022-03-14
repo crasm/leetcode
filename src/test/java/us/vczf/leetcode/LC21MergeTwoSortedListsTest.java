@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static us.vczf.leetcode.LeetCode21MergeTwoSortedLists.mergeTwoLists;
+import static us.vczf.leetcode.LC21MergeTwoSortedLists.mergeTwoLists;
 
-class LeetCode21MergeTwoSortedListsTest {
+class LC21MergeTwoSortedListsTest {
     @Test
     void testExample1() {
         assertArrayEquals(
                 new int[]{1,1,2,3,4,4},
                 mergeTwoLists(
-                        new LeetCode21MergeTwoSortedLists.ListNode(1, 2, 4),
-                        new LeetCode21MergeTwoSortedLists.ListNode(1, 3, 4)
+                        new LC21MergeTwoSortedLists.ListNode(1, 2, 4),
+                        new LC21MergeTwoSortedLists.ListNode(1, 3, 4)
                 ).toArray());
     }
 
@@ -26,7 +26,7 @@ class LeetCode21MergeTwoSortedListsTest {
     @Test
     void testExample3() {
         assertArrayEquals(new int[]{0}, mergeTwoLists(null,
-                new LeetCode21MergeTwoSortedLists.ListNode(0)).toArray()
+                new LC21MergeTwoSortedLists.ListNode(0)).toArray()
         );
     }
 }

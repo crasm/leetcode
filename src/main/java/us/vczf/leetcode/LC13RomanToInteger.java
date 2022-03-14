@@ -1,6 +1,6 @@
 package us.vczf.leetcode;
 
-class LeetCode13RomanToInteger {
+class LC13RomanToInteger {
     public static int romanToInt(String s) {
         int ans = 0;
         for (int i = 0; i < s.length(); i++) {

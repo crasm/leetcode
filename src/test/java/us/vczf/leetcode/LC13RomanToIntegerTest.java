@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static us.vczf.leetcode.LeetCode13RomanToInteger.romanToInt;
+import static us.vczf.leetcode.LC13RomanToInteger.romanToInt;
 
-class LeetCode13RomanToIntegerTest {
+class LC13RomanToIntegerTest {
     @Test
     void testExample1() {
         assertEquals(3, romanToInt("III"));

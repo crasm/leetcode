@@ -1,6 +1,6 @@
 package us.vczf.leetcode;
 
-class LeetCode14LongestCommonPrefix {
+class LC14LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
         StringBuilder sb = new StringBuilder(4);
         int i = 0;

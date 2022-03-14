@@ -3,9 +3,9 @@ package us.vczf.leetcode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static us.vczf.leetcode.LeetCode20ValidParentheses.isValid;
+import static us.vczf.leetcode.LC20ValidParentheses.isValid;
 
-public class LeetCode20ValidParenthesesTest {
+public class LC20ValidParenthesesTest {
     @Test
     void testExample1() {
         assertEquals(true, isValid("()"));

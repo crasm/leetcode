@@ -3,9 +3,9 @@ package us.vczf.leetcode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static us.vczf.leetcode.LeetCode14LongestCommonPrefix.longestCommonPrefix;
+import static us.vczf.leetcode.LC14LongestCommonPrefix.longestCommonPrefix;
 
-public class LeetCode14LongestCommonPrefixTest {
+public class LC14LongestCommonPrefixTest {
     @Test
     void testExample1() {
         assertEquals("fl", longestCommonPrefix(
