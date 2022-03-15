@@ -12,15 +12,13 @@ class LC3LongestSubstringWithoutRepeatingCharacters {
         while (j < s.length()) {
             char ch = s.charAt(j);
 
-            if (seen.containsKey(ch)) {
-                int ii = seen.get(ch) + 1;
-                // Discard everything that is no longer in window, from the
-                // original start {i} to the new start {ii}.
-                for (int k = i; k < ii; k++) {
-                    seen.remove(s.charAt(k));
-                }
-
-                i = ii; // Window now starts after duplicate key.
+            // Check if {ch} has been seen before. If it has, is it
+            // considered valid by being within the window [i, j]? If it is,
+            // we shrink the window by sliding i over to the index after the
+            // duplicate character.
+            Integer chIndex = seen.get(ch);
+            if (chIndex != null && chIndex >= i) {
+                i = chIndex + 1;
             }
 
             // Store {ch} in {seen}, save size of window if larger, and
