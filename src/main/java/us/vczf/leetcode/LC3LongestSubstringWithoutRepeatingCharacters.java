@@ -1,37 +1,35 @@
 package us.vczf.leetcode;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 class LC3LongestSubstringWithoutRepeatingCharacters {
-    /*
-    This operates by checking for a unique substring that starts at each
-    index of {s}. A more efficient solution is likely possible using a
-    sliding window.
-     */
     static int lengthOfLongestSubstring(String s) {
-        int maxLen = 0;
-        Map<Character, Void> seen = new HashMap<>();
+        int ret = 0;
+        Map<Character, Integer> seen = new HashMap<>();
+        int i = 0, j = 0;
 
-        for (int i = 0; i < s.length(); i++) {
-            seen.clear(); // {seen} must reset for each index of {s}
-            int j = i;
+        while (j < s.length()) {
+            char ch = s.charAt(j);
 
-            while (j < s.length()) {
-                char focus = s.charAt(j);
-                if (seen.containsKey(focus)) {
-                    break; // {focus} cannot count towards the current longest substring
+            if (seen.containsKey(ch)) {
+                int ii = seen.get(ch) + 1;
+                // Discard everything that is no longer in window, from the
+                // original start {i} to the new start {ii}.
+                for (int k = i; k < ii; k++) {
+                    seen.remove(s.charAt(k));
                 }
 
-                seen.put(focus, null);
-                j++;
+                i = ii; // Window now starts after duplicate key.
             }
 
-            int subLen = j - i;
-            maxLen = maxLen >= subLen ? maxLen : subLen;
+            // Store {ch} in {seen}, save size of window if larger, and
+            // enlarge the window by one.
+            seen.put(ch, j);
+            ret = Math.max(ret, j - i + 1);
+            j++;
         }
 
-        return maxLen;
+        return ret;
     }
 }
