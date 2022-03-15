@@ -30,4 +30,9 @@ public class LC3LongestSubstringWithoutRepeatingCharactersTest {
     void testIncreasingLength() {
         assertEquals(4, lengthOfLongestSubstring("aababcabcdb"));
     }
+
+    @Test
+    void testInvalidate() {
+        assertEquals(2, lengthOfLongestSubstring("abba"));
+    }
 }
